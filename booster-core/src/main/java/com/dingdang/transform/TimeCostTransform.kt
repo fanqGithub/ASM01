@@ -9,10 +9,10 @@ import com.dingdang.plugin.log
 /**
  * @author fanqi@inke.cn
  * @date 2023/1/3
- * 给方法打印日志transform
+ * 统计耗时方法transform
  */
-class LogTransform : Transform() {
-    override fun getName(): String = "LogTransform"
+class TimeCostTransform : Transform() {
+    override fun getName(): String = "TimeCostTransform"
 
     override fun getInputTypes(): MutableSet<QualifiedContent.ContentType> {
         return TransformManager.CONTENT_CLASS

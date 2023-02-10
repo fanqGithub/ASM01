@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "ASMDemo"
 include ':app'
 include ':booster-core'
+include ':network'

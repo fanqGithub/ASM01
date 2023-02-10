@@ -1,7 +1,7 @@
 package com.dingdang.plugin
 
 import com.android.build.gradle.AppExtension
-import com.dingdang.transform.LogTransform
+import com.dingdang.transform.TimeCostTransform
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -38,6 +38,6 @@ class BoosterMePlugin : Plugin<Project> {
                 log("target.gradle.taskGraph.whenReady : ${it.allTasks}")
             }
         }
-        android.registerTransform(LogTransform())
+        android.registerTransform(TimeCostTransform())
     }
 }

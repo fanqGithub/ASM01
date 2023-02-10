@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.dingdang.asmdemo.databinding.FragmentFirstBinding
 
@@ -35,6 +36,13 @@ class FirstFragment : Fragment() {
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
+        binding.buttonToast.setOnClickListener {
+            showToast()
+        }
+    }
+
+    private fun showToast(){
+        Toast.makeText(context,"toast me", Toast.LENGTH_LONG).show()
     }
 
     override fun onDestroyView() {
